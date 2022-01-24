@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.NosotrosActivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Sobre nosotros:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:includeFontPadding="true"
+        android:padding="24dp"
+        android:text="Disponemos de más de 50 vehículos en stock, emplazados de forma que la compra de su vehículo sea una experiencia placentera y segura pudiendo valorar cada coche con detenimiento. Un trato personalizado y cercano certifica nuestro afán por ofrecer un servicio profesional. Venga a conocernos a nuestras instalaciones de 2000 m2, nuestro personal es un equipo profesional y preparado para atenderle a usted y a su vehículo, con la mejor atención y servicio personalizado. Para nosotros el contacto y la sintonía con el cliente es lo primero. Más que servicio, más que tecnología de vanguardia, más que vehículos, ofrecemos confianza. Por qué lo difícil lo conseguimos, lo imposible…lo intentamos."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Ctra. de Carrión Km. 242 Nave 110 \n 13005 Ciudad Real\n \n 926230408\n926232578\nventas@automotor.es"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+</androidx.constraintlayout.widget.ConstraintLayout>
