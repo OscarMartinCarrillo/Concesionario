@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
 import org.izv.omc.concesionario.databinding.FragmentFirstBinding;
 import org.izv.omc.concesionario.model.Coche;
 import org.izv.omc.concesionario.view.adapter.CocheAdapter;
@@ -24,7 +27,6 @@ public class First extends Fragment {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

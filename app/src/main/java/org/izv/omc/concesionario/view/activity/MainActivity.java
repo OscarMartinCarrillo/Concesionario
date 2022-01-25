@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Cambiamos el titulo de la barra
         //getSupportActionBar().setTitle("Concesionario de PMDM");
+        getSupportActionBar().setTitle("Coches.es");
+        getSupportActionBar().setSubtitle("Concesionario");
 
         obtenerCoches();
     }

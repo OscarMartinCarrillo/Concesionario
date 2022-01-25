@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 
 import org.izv.omc.concesionario.R;
 import org.izv.omc.concesionario.model.Coche;
@@ -42,7 +43,15 @@ public class CocheAdapter extends RecyclerView.Adapter<CocheViewHolder> {
         holder.tvFuel.setText(coche.getCombustible());
         holder.tvGear.setText(coche.getCambio());
         holder.tvRef.setText(String.valueOf(coche.getRef()));
-        Glide.with(context).load(coche.getImagenPrincipal()).into(holder.ivCar);
+        //Cargo el contenido del Slider
+        ArrayList<SlideModel> imagenes = new ArrayList<>();
+        for (int i = 0; i < coche.getImagenes().length; i++) {
+            imagenes.add(new SlideModel(coche.getImagenes()[i], null, ScaleTypes.CENTER_CROP));
+            if(i >= 5)
+                i=coche.getImagenes().length;
+        }
+        holder.ivCar.setImageList(imagenes);
+        //Glide.with(context).load(coche.getImagenPrincipal()).into(holder.ivCar);
 
     }
 

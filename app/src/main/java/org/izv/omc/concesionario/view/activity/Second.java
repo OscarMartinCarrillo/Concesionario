@@ -43,13 +43,24 @@ public class Second extends Fragment {
         bundle = getArguments();
         coche = bundle.getParcelable("coche");
 
+        //Ponemos el lugar bien
+        String lugar = coche.getLugar();
+        //Si tiene coma, nos quedamos con el segundo elemento
+        if(lugar.contains(",")){
+            int lastComma = coche.getLugar().lastIndexOf(",");
+            lugar = coche.getLugar().substring(lastComma+2);
+        }
+        //Mayuscula
+        lugar = lugar.substring(0, 1).toUpperCase() + lugar.substring(1);
+
+
         binding.tvNameFicha.setText(coche.getTitulo());
         binding.tvPrecioFicha.setText(coche.getPrecio() + " €");
         binding.tvKmFicha.setText(coche.getKm() + " km");
         binding.tvCambioFicha.setText(coche.getCambio());
         binding.tvCombustibleFicha.setText(coche.getCombustible());
         binding.tvPotenciaFicha.setText(coche.getPotencia() + " cv");
-        binding.tvLugarFicha.setText(coche.getLugar());
+        binding.tvLugarFicha.setText(lugar);
         binding.tvNPuertasFicha.setText(String.valueOf(coche.getNpuertas()));
         binding.tvColorFicha.setText(coche.getColor());
         binding.tvAnyoFicha.setText(String.valueOf(coche.getYear()));
@@ -65,8 +76,14 @@ public class Second extends Fragment {
 
         //Cargo el contenido del Slider
         ArrayList<SlideModel> imagenes = new ArrayList<>();
+        int cant = coche.getImagenes().length;
+        if (cant>=10) {
+            cant = 10;
+        }
         for (int i = 0; i < coche.getImagenes().length; i++) {
-            imagenes.add(new SlideModel(coche.getImagenes()[i], (i+1)+"/"+coche.getImagenes().length, ScaleTypes.CENTER_INSIDE));
+            imagenes.add(new SlideModel(coche.getImagenes()[i], (i+1)+"/"+cant, ScaleTypes.CENTER_INSIDE));
+            if(i >= 10)
+                i=coche.getImagenes().length;
         }
         binding.imageSlider.setImageList(imagenes);
     }

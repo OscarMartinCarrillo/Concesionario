@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzcoskun.imageslider.ImageSlider;
+
 import org.izv.omc.concesionario.R;
 import org.izv.omc.concesionario.model.Coche;
 
@@ -17,7 +19,7 @@ public class CocheViewHolder extends RecyclerView.ViewHolder {
     public Coche coche;
     public Bundle bundle;
     public TextView tvName, tvPrice, tvKM, tvCV, tvFuel, tvGear, tvRef;
-    public ImageView ivCar;
+    public ImageSlider ivCar;
 
     public CocheViewHolder(@NonNull View itemView) {
         super(itemView);

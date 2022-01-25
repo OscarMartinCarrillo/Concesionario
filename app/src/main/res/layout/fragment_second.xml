@@ -14,81 +14,38 @@
             android:id="@+id/imageSlider"
             android:layout_width="match_parent"
             android:layout_height="196dp"
-            android:layout_marginTop="8dp"
+            android:background="@drawable/gradient"
             android:scaleType="centerCrop"
+            app:iss_auto_cycle="true"
+            app:iss_delay="0"
+            app:iss_period="3000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:iss_auto_cycle="true"
-            app:iss_period="3000"
-            app:iss_delay="0"
-            android:background="@drawable/gradient">
+            app:layout_constraintTop_toTopOf="parent">
 
         </com.denzcoskun.imageslider.ImageSlider>
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameFicha"
-            app:srcCompat="@android:drawable/divider_horizontal_textfield" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:srcCompat="@android:drawable/divider_horizontal_textfield" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:srcCompat="@android:drawable/divider_horizontal_textfield" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescripcionFicha"
-            app:srcCompat="@android:drawable/divider_horizontal_textfield" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
             app:srcCompat="@android:drawable/divider_horizontal_textfield" />
 
         <TextView
             android:id="@+id/tvNameFicha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
             android:text="Seat Panda"
+            android:textColor="#000000"
             android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
@@ -97,220 +54,487 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="Precio: "
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNameFicha" />
 
         <TextView
             android:id="@+id/tvPrecioFicha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="15.000€"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Kilometros: "
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView9" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Cambio: "
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Combustible: "
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Potencia: "
-            app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Lugar: "
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-            app:layout_constraintStart_toEndOf="@+id/imageView9" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6593707" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Numero de Puertas: "
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="@+id/textView9" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Color: "
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
-            app:layout_constraintStart_toStartOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Año: "
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
-            app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Decripción:"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-        <TextView
-            android:id="@+id/tvDescripcionFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:includeFontPadding="false"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut tortor rhoncus, sollicitudin risus eget, euismod magna. Morbi congue ornare est, nec aliquam lectus volutpat sed. Nulla dignissim nisi non lectus luctus, id hendrerit mauris scelerisque. In hac habitasse platea dictumst. Nunc nec nisi ex. Nam ut tellus sit amet ante vulputate consequat. Integer venenatis sollicitudin nisl, et varius ligula mattis volutpat. Aenean consectetur enim ut mauris facilisis gravida. Sed pulvinar, nulla sit amet tempus malesuada, dolor sem tempus nulla, eu iaculis ligula est id magna. Proin dignissim condimentum semper. Nam vitae orci fermentum, sodales metus vitae, dapibus urna. Nulla ut turpis non est finibus finibus.  Nam id faucibus tellus. Fusce dignissim erat porta, semper mi in, tincidunt lorem. Duis mollis interdum auctor. Proin venenatis arcu id arcu ultrices, eget vestibulum tortor ultricies. Nam mauris nisi, molestie nec vestibulum eu, condimentum id justo. Praesent fermentum odio purus, eu aliquam lectus sodales at. Proin hendrerit ligula a tortor maximus, ut euismod eros tincidunt. Nunc sagittis eleifend justo quis laoreet. Curabitur in congue mi. Quisque metus enim, sagittis sed libero nec, pharetra consectetur nunc. Nullam pretium mollis magna. Donec sit amet diam luctus, molestie ex et, dapibus quam. Proin accumsan ac felis at lobortis. Vivamus vel sodales elit. Fusce bibendum quam facilisis nisi consectetur, sit amet ornare arcu posuere. Fusce posuere, tellus a elementum aliquam, magna elit convallis risus, ac luctus mauris magna vel quam.  Integer turpis augue, gravida ut velit sed, sodales malesuada nisl. Pellentesque rhoncus consectetur tristique. Integer eget mollis odio. Cras iaculis erat et pellentesque accumsan. Sed a odio in neque porta cursus in non ligula. Praesent viverra nibh at quam elementum viverra. Mauris elementum, massa venenatis posuere convallis, lacus sem viverra enim, non tempus ligula quam at dolor. Praesent eleifend, dui a dictum molestie, felis felis faucibus elit, eu fringilla tortor neque id arcu. Ut vitae mi commodo, convallis augue cursus, pellentesque erat. Nulla sit amet odio semper, iaculis tortor a, vulputate sem."
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"
+            android:text="15.000€"
+            android:textColor="#B71C1C"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="URL Anuncio: "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
         <TextView
             android:id="@+id/tvUrlFicha"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
             android:text="https://educacionadistancia.juntadeandalucia.es/centros/granada/mod/assign/view.php?id=187563"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <TextView
-            android:id="@+id/tvKmFicha"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="30.000 KM"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-            app:layout_constraintStart_toEndOf="@+id/textView5" />
+            android:layout_margin="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrecioFicha">
 
-        <TextView
-            android:id="@+id/tvCambioFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
-            app:layout_constraintStart_toEndOf="@+id/textView6" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tvCombustibleFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Diesel"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
-            app:layout_constraintStart_toEndOf="@+id/textView7" />
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tvPotenciaFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100 cv"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
-            app:layout_constraintStart_toEndOf="@+id/textView8" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvLugarFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tenerife"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-            app:layout_constraintStart_toEndOf="@+id/textView9" />
+                        <androidx.constraintlayout.widget.Barrier
+                            android:id="@+id/barrier6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:barrierDirection="end"
+                            app:constraint_referenced_ids="cardView8"
+                            tools:layout_editor_absoluteX="360dp"
+                            tools:layout_editor_absoluteY="208dp" />
 
-        <TextView
-            android:id="@+id/tvNPuertasFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/textView" />
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView8"
+                            app:layout_constraintStart_toStartOf="@+id/cardView8"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView8">
 
-        <TextView
-            android:id="@+id/tvColorFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gris"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-            app:layout_constraintStart_toEndOf="@+id/textView4" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvAnyoFicha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2005"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
-            app:layout_constraintStart_toEndOf="@+id/textView10" />
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/calendar" />
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Año"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                                <TextView
+                                    android:id="@+id/tvAnyoFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2005"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="32dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView11"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/place" />
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lugar"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+                                <TextView
+                                    android:id="@+id/tvLugarFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tenerife"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toStartOf="@+id/cardView6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/cardView8"
+                            app:layout_constraintTop_toTopOf="@+id/cardView8">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView12"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/km" />
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="1dp"
+                                    android:text="Kilometros"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+                                <TextView
+                                    android:id="@+id/tvKmFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30.000 KM"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView4"
+                            app:layout_constraintStart_toStartOf="@+id/cardView4"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView13"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/power" />
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Potencia"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+                                <TextView
+                                    android:id="@+id/tvPotenciaFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="100 cv"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toStartOf="@+id/cardView9"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/cardView4"
+                            app:layout_constraintTop_toTopOf="@+id/cardView4">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView14"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/fuel_station" />
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Combustible"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+                                <TextView
+                                    android:id="@+id/tvCombustibleFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diesel"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                            app:layout_constraintStart_toStartOf="@+id/cardView6"
+                            app:layout_constraintTop_toTopOf="@+id/cardView5">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView15"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/gear_shift" />
+
+                                <TextView
+                                    android:id="@+id/textView6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cambio"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+                                <TextView
+                                    android:id="@+id/tvCambioFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="8dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cardView6"
+                            app:layout_constraintTop_toTopOf="@+id/cardView6">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView16"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/color" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Color"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+                                <TextView
+                                    android:id="@+id/tvColorFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gris"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView9"
+                            app:layout_constraintStart_toStartOf="@+id/cardView9"
+                            app:layout_constraintTop_toTopOf="@+id/cardView7">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView17"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/door_car" />
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Puertas"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+                                <TextView
+                                    android:id="@+id/tvNPuertasFicha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Decripción:"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcionFicha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="8dp"
+                            android:includeFontPadding="false"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut tortor rhoncus, sollicitudin risus eget, euismod magna. Morbi congue ornare est, nec aliquam lectus volutpat sed. Nulla dignissim nisi non lectus luctus, id hendrerit mauris scelerisque. In hac habitasse platea dictumst. Nunc nec nisi ex. Nam ut tellus sit amet ante vulputate consequat. Integer venenatis sollicitudin nisl, et varius ligula mattis volutpat. Aenean consectetur enim ut mauris facilisis gravida. Sed pulvinar, nulla sit amet tempus malesuada, dolor sem tempus nulla, eu iaculis ligula est id magna. Proin dignissim condimentum semper. Nam vitae orci fermentum, sodales metus vitae, dapibus urna. Nulla ut turpis non est finibus finibus.  Nam id faucibus tellus. Fusce dignissim erat porta, semper mi in, tincidunt lorem. Duis mollis interdum auctor. Proin venenatis arcu id arcu ultrices, eget vestibulum tortor ultricies. Nam mauris nisi, molestie nec vestibulum eu, condimentum id justo. Praesent fermentum odio purus, eu aliquam lectus sodales at. Proin hendrerit ligula a tortor maximus, ut euismod eros tincidunt. Nunc sagittis eleifend justo quis laoreet. Curabitur in congue mi. Quisque metus enim, sagittis sed libero nec, pharetra consectetur nunc. Nullam pretium mollis magna. Donec sit amet diam luctus, molestie ex et, dapibus quam. Proin accumsan ac felis at lobortis. Vivamus vel sodales elit. Fusce bibendum quam facilisis nisi consectetur, sit amet ornare arcu posuere. Fusce posuere, tellus a elementum aliquam, magna elit convallis risus, ac luctus mauris magna vel quam.  Integer turpis augue, gravida ut velit sed, sodales malesuada nisl. Pellentesque rhoncus consectetur tristique. Integer eget mollis odio. Cras iaculis erat et pellentesque accumsan. Sed a odio in neque porta cursus in non ligula. Praesent viverra nibh at quam elementum viverra. Mauris elementum, massa venenatis posuere convallis, lacus sem viverra enim, non tempus ligula quam at dolor. Praesent eleifend, dui a dictum molestie, felis felis faucibus elit, eu fringilla tortor neque id arcu. Ut vitae mi commodo, convallis augue cursus, pellentesque erat. Nulla sit amet odio semper, iaculis tortor a, vulputate sem."
+                            app:layout_constraintStart_toStartOf="@+id/textView11"
+                            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
